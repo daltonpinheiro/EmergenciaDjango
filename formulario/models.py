@@ -22,12 +22,6 @@ class DimProcedencia(models.Model):
 	def __str__(self):
 		return str(self.DescProcedencia)
 
-class DimQueixa(models.Model):
-	DescQueixa=models.CharField(max_length=100)
-	def __unicode__(self):
-		return str(self.DescQueixa)
-	def __str__(self):
-		return str(self.DescQueixa)
 
 class DimFluxograma(models.Model):
 	DescFluxograma=models.CharField(max_length=100)
@@ -81,7 +75,7 @@ class Paciente(models.Model):
 	)
 	Regulado=models.CharField(max_length=1,choices=ReguladoChoices)
 	Procedencia=models.ForeignKey(DimProcedencia,verbose_name="Procedência",null=True,blank=True)
-	Queixa=models.ForeignKey(DimQueixa,null=True,blank=True)
+	Queixa=models.TextField(max_length=120,null=True,blank=True)
 	Fluxograma=models.ForeignKey(DimFluxograma,verbose_name="Fluxograma",null=True,blank=True)
 	Discriminador=models.ForeignKey(DimDiscriminador,verbose_name="Discriminador",related_name="Discriminador",null=True,blank=True)
 	SemDiscriminador=models.BooleanField("Não")
