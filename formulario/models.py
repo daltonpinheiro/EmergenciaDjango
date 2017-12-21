@@ -43,10 +43,7 @@ class DimDiscriminador(models.Model):
 	def __str__(self):
 		return str(self.DescDiscriminador)
 
-class DimPrioridade(models.Model):
-	DescPrioridade=models.CharField(max_length=30)
-	def __str__(self):
-		return str(self.DescPrioridade)
+
 class DimClassificador(models.Model):
 	DescClassificador=models.CharField(max_length=60)
 	def __str__(self):
@@ -67,10 +64,15 @@ class Paciente(models.Model):
 	)
 	Sexo = models.CharField(max_length=2,choices=SexoChoices,)
 	DataNascimento=models.DateField("Data de Nascimento")
-	Idade=models.PositiveIntegerField("Idade")
-	def age(self):
+	Idade=models.PositiveSmallIntegerField("Idade")
+	
+	def get_age(self):
 		return int((self.Data - self.DataNascimento).days / 365.25  )
-	Idade=property(age)
+	
+	def save(self, *args, **kwargs):
+		self.Idade = self.get_age()
+		super(Paciente, self).save(*args, **kwargs)
+	
 	Chegada=models.ForeignKey(DimChegada,null=True,blank=True)
 	Especialidade=models.ForeignKey(DimEspecialidade,null=True,blank=True)
 	ReguladoChoices = (
@@ -104,14 +106,17 @@ class Paciente(models.Model):
 		('BRANCO','6-ELETIVO (BRANCO)'),
 	)
 	prioridade=models.CharField(verbose_name="Prioridade Clínica",choices=PrioridadeChoices,max_length=9)
-	ObsPiroridade=models.CharField(verbose_name="Observação",max_length=100)
+	ObsPrioridade=models.TextField(verbose_name="Observação",max_length=100)
 	HoraFimCR=models.TimeField("Hora Fim CR")
-	Classificador=models.ForeignKey(DimClassificador,verbose_name="Classificador",related_name="Classificador",blank=False)
+	Classificador=models.ForeignKey(DimClassificador,verbose_name="Classificador",related_name="Classificador",blank=True,null=True)
 	#Reclassificação segunda classificação vou colocar 2 no final de cada campo
 	Discriminador2=models.ForeignKey(DimDiscriminador,verbose_name="Discriminador",related_name="Discriminador2",null=True,blank=True)
-	prioridade2=models.CharField(verbose_name="Prioridade Clínica2",choices=PrioridadeChoices,max_length=9)
+	prioridade2=models.CharField(verbose_name="Prioridade Clínica2",choices=PrioridadeChoices,max_length=9,null=True,blank=True)
 	hora=models.TimeField("Hora")#hora da reclassificação
-	Classificador2=models.ForeignKey(DimClassificador,verbose_name="Classificador 2",related_name="Classificador2",blank=True)
+	FluxoInterno=models.TextField(max_length=100)
+	Classificador2=models.ForeignKey(DimClassificador,verbose_name="Classificador 2",related_name="Classificador2",blank=True,null=True)
 	HoraFimReclass=models.TimeField("Hora Fim da Reclassificação")
+	def __unicode__(self):
+		return str(self.Nome)
 	def __str__(self):
-		return self.nome
+		return self.Nome
