@@ -20,7 +20,7 @@ from django.contrib.auth import views as Views
 
 urlpatterns = [
 	url(r'^admin/', admin.site.urls),
-	url(r'^$', views.RegistraPaciente,name="RegistraPaciente"),
+    url(r'^$', views.RegistraPaciente,name="RegistraPaciente"),
      url(r'^accounts/login/$', Views.login, name='login'),
     url(r'^accounts/logout/$', Views.logout, name='logout', kwargs={'next_page': '/'}), 
 	#url(r'^r$', views.RegistraPaciente,name="formulario"),

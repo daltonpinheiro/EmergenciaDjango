@@ -20,3 +20,6 @@ def RegistraPaciente(request):
     else:
         form = FormPaciente()
     return render(request, 'Banco de dados CR.html', {'form': form})
+
+
+   

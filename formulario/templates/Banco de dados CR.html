@@ -39,7 +39,10 @@ entre as marcas DIV serão substituídas.-->
 	<button type="submit" class="save btn btn-default" >Registrar</button>
 	<button type="reset" value="Reset">Limpar</button>
 	<input type="checkbox" id="imprime" checked > imprime página <br>
-	<small>(<a href="{% url 'logout' %}">sair</a>)</small></p>
+	<small>(<a href="{% url 'logout' %}">sair</a>)</small>
+  {% if user.is_superuser %}
+    <small>(<a href="{% url 'admin:index' %}">Administrativo</a>)</small>
+  {% endif %}
 </div>
 
 
