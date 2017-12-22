@@ -29,6 +29,8 @@ class DimFluxograma(models.Model):
 		return str(self.DescFluxograma)
 	def __str__(self):
 		return str(self.DescFluxograma)
+	class Meta:
+		ordering=['DescFluxograma']
 
 class DimDiscriminador(models.Model):
 	DescDiscriminador=models.CharField(max_length=100)
@@ -36,12 +38,17 @@ class DimDiscriminador(models.Model):
 		return str(self.DescDiscriminador)
 	def __str__(self):
 		return str(self.DescDiscriminador)
+	class Meta:
+		ordering=['DescDiscriminador']
+
 
 
 class DimClassificador(models.Model):
 	DescClassificador=models.CharField(max_length=60)
 	def __str__(self):
 		return str(self.DescClassificador)
+	class Meta:
+		ordering=['DescClassificador']
 
 
 
@@ -50,8 +57,12 @@ class Paciente(models.Model):
 	HoraChegada=models.TimeField("Hora Chegada")
 	HoraInicioCR=models.TimeField("Hora Início CR")
 	Data=models.DateField("Data")
-	Prontuario=models.PositiveIntegerField("Prontuário")
-	Nome=models.CharField("Nome",max_length=100, null=False,blank=False)
+	Prontuario=models.PositiveIntegerField("Prontuário",null=True,blank=True)
+	Nome=models.CharField("Nome",max_length=100)
+	@property
+	def nome(self):
+		n=self.Nome.split()[0]
+		return (n)
 	SexoChoices = (
 		('M', 'Masculino'),
 		('F', 'Feminino'),
@@ -100,17 +111,20 @@ class Paciente(models.Model):
 		('BRANCO','6-ELETIVO (BRANCO)'),
 	)
 	prioridade=models.CharField(verbose_name="Prioridade Clínica",choices=PrioridadeChoices,max_length=9)
-	ObsPrioridade=models.TextField(verbose_name="Observação",max_length=100)
-	HoraFimCR=models.TimeField("Hora Fim CR")
+	ObsPrioridade=models.TextField(verbose_name="Observação",max_length=100,blank=True,null=True)
+	HoraFimCR=models.TimeField("Hora Fim CR",blank=True,null=True)
 	Classificador=models.ForeignKey(DimClassificador,verbose_name="Classificador",related_name="Classificador",blank=True,null=True)
 	#Reclassificação segunda classificação vou colocar 2 no final de cada campo
 	Discriminador2=models.ForeignKey(DimDiscriminador,verbose_name="Discriminador",related_name="Discriminador2",null=True,blank=True)
 	prioridade2=models.CharField(verbose_name="Prioridade Clínica2",choices=PrioridadeChoices,max_length=9,null=True,blank=True)
-	hora=models.TimeField("Hora")#hora da reclassificação
-	FluxoInterno=models.TextField(max_length=100)
+	hora=models.TimeField("Hora",null=True,blank=True)#hora da reclassificação
+	FluxoInterno=models.TextField(max_length=100,null=True,blank=True)
 	Classificador2=models.ForeignKey(DimClassificador,verbose_name="Classificador 2",related_name="Classificador2",blank=True,null=True)
-	HoraFimReclass=models.TimeField("Hora Fim da Reclassificação")
+	HoraFimReclass=models.TimeField("Hora Fim da Reclassificação",blank=True,null=True)
 	def __unicode__(self):
 		return str(self.Nome)
 	def __str__(self):
 		return self.Nome
+
+	class Meta:
+		ordering=['Data','HoraChegada']

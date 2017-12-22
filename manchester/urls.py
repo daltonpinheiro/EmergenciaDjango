@@ -16,8 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from formulario import views
+from django.contrib.auth import views as Views
+
 urlpatterns = [
 	url(r'^admin/', admin.site.urls),
-	url(r'^$', views.mostra,name="formulario"),
-	url(r'^r$', views.RegistraPaciente,name="RegistraPaciente"),
+	url(r'^$', views.RegistraPaciente,name="RegistraPaciente"),
+     url(r'^accounts/login/$', Views.login, name='login'),
+    url(r'^accounts/logout/$', Views.logout, name='logout', kwargs={'next_page': '/'}), 
+	#url(r'^r$', views.RegistraPaciente,name="formulario"),
 ]
