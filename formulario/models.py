@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+import datetime
 
 class DimChegada(models.Model):
 	DescChegada=models.CharField(max_length=30)
@@ -127,4 +128,4 @@ class Paciente(models.Model):
 		return self.Nome
 
 	class Meta:
-		ordering=['Data','HoraChegada']
+		ordering=['-Data','-HoraChegada']

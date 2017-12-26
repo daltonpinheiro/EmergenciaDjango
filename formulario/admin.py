@@ -1,5 +1,4 @@
 from django.contrib import admin
-
 # Register your models here.
 from .models import DimChegada,DimEspecialidade,DimProcedencia,DimFluxograma,DimDiscriminador,DimClassificador,Paciente
 from import_export import resources
@@ -26,3 +25,5 @@ class PacienteAdmin(ImportExportModelAdmin):
 	
 
 admin.site.register(Paciente,PacienteAdmin)
+
+
