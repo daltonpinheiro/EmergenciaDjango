@@ -46,6 +46,8 @@ class DimDiscriminador(models.Model):
 
 class DimClassificador(models.Model):
 	DescClassificador=models.CharField(max_length=60)
+	def __unicode__(self):
+		return str(self.DescClassificador)
 	def __str__(self):
 		return str(self.DescClassificador)
 	class Meta:
@@ -58,7 +60,7 @@ class Paciente(models.Model):
 	HoraChegada=models.TimeField("Hora Chegada")
 	HoraInicioCR=models.TimeField("Hora Início CR")
 	Data=models.DateField("Data")
-	Prontuario=models.PositiveIntegerField("Prontuário",null=True,blank=True)
+	Prontuario=models.CharField("Prontuário",max_length=12,null=True,blank=True)
 	Nome=models.CharField("Nome",max_length=100)
 	@property
 	def nome(self):
@@ -92,17 +94,17 @@ class Paciente(models.Model):
 	Discriminador=models.ForeignKey(DimDiscriminador,verbose_name="Discriminador",related_name="Discriminador",null=True,blank=True)
 	SemDiscriminador=models.BooleanField("Não")
 	#Sinais Vitais
-	Glic=models.CharField('Glic',max_length=7,blank=True)
-	ECG=models.CharField('ECG',max_length=7,blank=True)
-	Pulso=models.CharField('Pulso',max_length=7,blank=True)
-	Reg=models.CharField('Reg',max_length=7,blank=True)
-	Irreg=models.CharField('Irreg.',max_length=7,blank=True)
-	SO2=models.CharField('SO2',max_length=7,blank=True)
-	AA=models.CharField('AA',max_length=7,blank=True)
-	O2=models.CharField('c/ O2',max_length=7,blank=True)
-	Temp=models.CharField('Temp',max_length=7,blank=True)
-	Dor=models.CharField('Dor',max_length=7,blank=True)
-	PA=models.CharField('PA',max_length=7,blank=True)
+	Glic=models.CharField('Glic',max_length=9,blank=True,null=True)
+	ECG=models.CharField('ECG',max_length=9,blank=True,null=True)
+	Pulso=models.CharField('Pulso',max_length=9,blank=True,null=True)
+	Reg=models.CharField('Reg',max_length=9,blank=True,null=True)
+	Irreg=models.CharField('Irreg.',max_length=9,blank=True,null=True)
+	SO2=models.CharField('SO2',max_length=9,blank=True,null=True)
+	AA=models.CharField('AA',max_length=9,blank=True,null=True)
+	O2=models.CharField('c/ O2',max_length=9,blank=True,null=True)
+	Temp=models.CharField('Temp',max_length=9,blank=True,null=True)
+	Dor=models.CharField('Dor',max_length=9,blank=True,null=True)
+	PA=models.CharField('PA',max_length=9,blank=True,null=True)
 	PrioridadeChoices=(
 		('VERMELHO','1-EMERGENCIA (VERMELHO)'),
 		('LARANJA','2-MUITO URGENTE (LARANJA)'),
