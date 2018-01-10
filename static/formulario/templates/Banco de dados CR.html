@@ -1,0 +1,354 @@
+{% load staticfiles %}
+{% load widget_tweaks %}
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 12">
+<link rel=File-List href="Banco%20de%20dados%20CR_arquivos/filelist.xml">
+
+<link rel="stylesheet" type="text/css" href="{%static 'css/Formulario.css' %}">
+
+<script>
+	function ImprimeForm(){
+		var a=document.getElementById("imprime").checked;
+		if (a){
+			window.print();
+		}
+	}
+
+
+function SetDate()
+{
+  var date = new Date();
+  var day = date.getDate();
+  var month = date.getMonth()+1;
+  var year = date.getFullYear();
+  if (month < 10) month = "0" + month;
+  if (day < 10) day = "0" + day;
+  var today =year + "-" + month + "-" + day;
+  document.getElementById('{{ form.Data.id_for_label }}').value = today;
+}
+
+function CalcIdade(){
+  var nasc = document.getElementById('{{ form.DataNascimento.id_for_label }}').value;
+  var hj = document.getElementById('{{ form.Data.id_for_label }}').value; 
+  var n=new Date(nasc);
+  var h=new Date(hj);
+   document.getElementById('Idade').value= Math.trunc((h.getTime() - n.getTime()) / 31557600000);
+    document.form1.submit();
+}
+
+</script>
+
+</head>
+
+<body onload="SetDate();">
+<!--[if !excel]>&nbsp;&nbsp;<![endif]-->
+<!--As seguintes informações foram geradas pelo Assistente para Publicação como
+Página da Web do Microsoft Office Excel.-->
+<!--Se o mesmo item for republicado a partir do Excel, todas as informações
+entre as marcas DIV serão substituídas.-->
+<!----------------------------->
+<!--INÍCIO DA SAÍDA DO 'ASSISTENTE PARA PUBLICAÇÃO COMO PÁGINA DA WEB' DO EXCEL
+-->
+
+<form method="POST" class="post-form" onsubmit="ImprimeForm()">{% csrf_token %}
+<div id="botoes" align=left>
+	<button type="submit" class="save btn btn-default" >Registrar</button>
+	<button type="reset" value="Reset">Limpar</button>
+	<input type="checkbox" id="imprime" checked > imprime página <br>
+	<small>(<a href="{% url 'logout' %}">sair</a>)</small>
+  {% if user.is_superuser %}
+    <small>(<a href="{% url 'admin:index' %}">Administrativo</a>)</small>
+  {% endif %}
+</div>
+
+
+
+
+<div id="Banco de dados CR_15340" align=center x:publishsource="Excel">
+
+<table border=0 cellpadding=0 cellspacing=0 width=789 class=xl6615340
+ style='border-collapse:collapse;table-layout:fixed;width:594pt'>
+ <col class=xl6615340 width=110 style='mso-width-source:userset;mso-width-alt:
+ 4022;width:83pt'>
+ <col class=xl6615340 width=67 style='mso-width-source:userset;mso-width-alt:
+ 2450;width:50pt'>
+ <col class=xl6615340 width=54 style='mso-width-source:userset;mso-width-alt:
+ 1974;width:41pt'>
+ <col class=xl6615340 width=68 style='mso-width-source:userset;mso-width-alt:
+ 2486;width:51pt'>
+ <col class=xl6615340 width=54 style='mso-width-source:userset;mso-width-alt:
+ 1974;width:41pt'>
+ <col class=xl6615340 width=45 span=2 style='mso-width-source:userset;
+ mso-width-alt:1645;width:34pt'>
+ <col class=xl6615340 width=74 style='mso-width-source:userset;mso-width-alt:
+ 2706;width:56pt'>
+ <col class=xl6615340 width=47 style='mso-width-source:userset;mso-width-alt:
+ 1718;width:35pt'>
+ <col class=xl6615340 width=68 style='mso-width-source:userset;mso-width-alt:
+ 2486;width:51pt'>
+ <col class=xl6615340 width=76 style='mso-width-source:userset;mso-width-alt:
+ 2779;width:57pt'>
+ <col class=xl6615340 width=81 style='mso-width-source:userset;mso-width-alt:
+ 2962;width:61pt'>
+ <tr height=20 style='mso-height-source:userset;height:15.0pt'>
+  <td colspan=12 rowspan=2 height=40 width=789 style='border-right:.5pt solid black;
+  height:30.0pt;width:594pt' align=left valign=top>
+  <![if !vml]><span style='mso-ignore:vglayout;
+  position:absolute;z-index:1;margin-left:60px;margin-top:2px;width:673px;
+  height:76px'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=0 height=0></td>
+    <td width=68></td>
+    <td width=462></td>
+    <td width=143></td>
+   </tr>
+   <tr>
+    <td height=15></td>
+    <td colspan=2></td>
+    <td rowspan=3 align=left valign=top><img width=143 height=76
+    src="{%static 'image/Banco%20de%20dados%20CR_15340_image003.gif'%}"
+    v:shapes="Picture_x0020_25"></td>
+   </tr>
+   <tr>
+    <td height=51></td>
+    <td align=left valign=top><img width=68 height=51
+    src="{%static  'image/Banco_de_dados_CR_15340_image004.gif'%}"
+    alt=brasao></td>
+   </tr>
+   <tr>
+    <td height=10></td>
+   </tr>
+  </table>
+  </span><![endif]><span style='mso-ignore:vglayout2'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td colspan=12 rowspan=2 height=40 class=xl17215340 width=789
+    style='border-right:.5pt solid black;height:30.0pt;width:594pt'>PRONTO
+    ATENDIMENTO MÉDICO - HUMAP</td>
+   </tr>
+  </table>
+  </span></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+ </tr>
+ <tr height=42 style='mso-height-source:userset;height:31.5pt'>
+  <td colspan=12 height=42 class=xl17815340 width=789 style='border-right:.5pt solid black;
+  height:31.5pt;width:594pt'>Ficha de Classificação de Risco</td>
+ </tr>
+ <tr height=30 style='mso-height-source:userset;height:23.1pt'>
+  <td colspan=8 height=30 class=xl15115340 width=517 style='border-right:.5pt solid black;
+  height:23.1pt;width:390pt'>Registro Paciente</td>
+  <td colspan=2 class=xl18615340 width=115 style='border-right:.5pt solid black;
+  border-left:none;width:86pt'>Hora Chegada</td>
+  <td colspan=2 class=xl11415340 style='border-right:.5pt solid black;
+  border-left:none'><input type="time" name="{{form.HoraChegada.name}}" required id="{{ form.HoraChegada.id_for_label }}" /></td>
+ </tr>
+ <tr height=36 style='mso-height-source:userset;height:27.0pt'>
+  <td height=36 class=xl6915340 width=110 style='height:27.0pt;border-top:none;
+  width:83pt'>Hora início CR<span style='mso-spacerun:yes'> </span></td>
+  <td colspan=2 class=xl11615340 width=121 style='border-right:.5pt solid black;
+  border-left:none;width:91pt'><input type="time" name="{{form.HoraInicioCR.name}}" required id="{{ form.HoraInicioCR.id_for_label }}" /></td>
+  <td colspan=2 class=xl18215340 width=122 style='border-left:none;width:92pt'>Data:</td>
+  <td colspan=3 class=xl11615340 width=164 style='border-right:.5pt solid black;
+  width:124pt'><input type="Date" name="{{form.Data.name}}" required id="{{ form.Data.id_for_label }}"  /></td>
+  <td colspan=2 class=xl18215340 width=115 style='border-left:none;width:86pt'>Prontuário</td>
+  <td colspan=2 class=xl18415340 width=157 style='border-right:.5pt solid black;
+  width:118pt'>{% render_field form.Prontuario max=99999999 size=12 %}</td>
+ </tr>
+ <tr height=34 style='mso-height-source:userset;height:25.5pt'>
+  <td height=34 class=xl7015340 width=110 style='height:25.5pt;border-top:none;
+  width:83pt'>Nome:</td>
+  <td colspan=11 class=xl12615340 width=679 style='border-right:.5pt solid black;
+  border-left:none;width:511pt'>{% render_field form.Nome size="80" %}</td>
+ </tr>
+ <tr height=42 style='mso-height-source:userset;height:31.5pt'>
+  <td height=42 class=xl7115340 width=110 style='height:31.5pt;border-top:none;
+  width:83pt'>Sexo:</td>
+  <td colspan=2 class=xl12415340 width=121 style='border-right:.5pt solid black;
+  border-left:none;width:91pt'>{{form.Sexo}}</td>
+  <td colspan=2 class=xl12915340 width=122 style='border-left:none;width:92pt'>Data
+  de nascimento</td>
+  <td colspan=3 class=xl12115340 width=164 style='border-right:.5pt solid black;
+  border-left:none;width:124pt'><input type="Date" name="{{form.DataNascimento.name}}" onblur='CalcIdade();' required id="{{ form.DataNascimento.id_for_label }}" /></td>
+  <td colspan=2 class=xl12915340 width=115 style='border-left:none;width:86pt'>Idade</td>
+  <td colspan=2 class=xl13015340 width=157 style='border-right:.5pt solid black;
+  border-left:none;width:118pt'>{% render_field form.Idade id="Idade"   max=1000%}</td>
+ </tr>
+ <tr height=39 style='mso-height-source:userset;height:29.25pt'>
+  <td height=39 class=xl7215340 width=110 style='height:29.25pt;width:83pt'>Chegada</td>
+  <td colspan=4 class=xl10915340 width=243 style='width:183pt'>{{form.Chegada}}</td>
+  <td colspan=3 class=xl11815340 width=164 style='border-right:.5pt solid black;
+  width:124pt'>Especialidade</td>
+  <td colspan=4 class=xl11015340 width=272 style='border-right:.5pt solid black;
+  width:204pt'>{{form.Especialidade}}</td>
+ </tr>
+ <tr height=39 style='mso-height-source:userset;height:29.25pt'>
+  <td height=39 class=xl7315340 width=110 style='height:29.25pt;width:83pt'>Regulado</td>
+  <td colspan=4 class=xl10915340 width=243 style='border-left:none;width:183pt'>{{form.Regulado}}</td>
+  <td colspan=3 class=xl11115340 width=164 style='width:124pt'>Procedência</td>
+  <td colspan=4 class=xl11215340 width=272 style='border-right:.5pt solid black;
+  border-left:none;width:204pt'>{{form.Procedencia}}</td>
+ </tr>
+ <tr height=20 style='mso-height-source:userset;height:15.0pt'>
+  <td colspan=12 height=20 class=xl15115340 width=789 style='border-right:.5pt solid black;
+  height:15.0pt;width:594pt'>Classificação de Risco</td>
+ </tr>
+ <tr height=20 style='mso-height-source:userset;height:15.0pt'>
+  <td rowspan=2 height=40 class=xl15415340 width=110 style='border-bottom:.5pt solid black;
+  height:30.0pt;border-top:none;width:83pt'>Queixa</td>
+  <td colspan=11 rowspan=2 class=xl16015340 width=679 style='border-right:.5pt solid black;
+  border-bottom:.5pt solid black;width:511pt'>{%render_field form.Queixa  cols="80" rows="1.9" %}</td>
+ </tr>
+ <tr height=20 style='mso-height-source:userset;height:15.0pt'>
+ </tr>
+ <tr height=35 style='mso-height-source:userset;height:26.25pt'>
+  <td height=35 class=xl6715340 width=110 style='height:26.25pt;border-top:
+  none;width:83pt'>Fluxograma:</td>
+  <td colspan=11 class=xl8915340 width=679 style='border-right:.5pt solid black;
+  border-left:none;width:511pt'>{%render_field form.Fluxograma  %}</td>
+ </tr>
+ <tr height=38 style='mso-height-source:userset;height:28.5pt'>
+  <td height=38 class=xl6715340 width=110 style='height:28.5pt;border-top:none;
+  width:83pt'>Discriminador</td>
+  <td colspan=9 class=xl8915340 width=522 style='border-left:none;width:393pt'>
+  	{%render_field form.Discriminador %}
+  </td>
+  <td colspan=2 height=38 width=157 style='border-right:.5pt solid black;
+  height:28.5pt;width:118pt' align=left valign=top>
+  <![if !vml]><span style='mso-ignore:vglayout;
+  position:absolute;z-index:7;margin-left:10px;margin-top:8px;width:124px;
+  height:22px'>{{form.SemDiscriminador}} Não<![if !vml]></span><![endif]><span
+  style='mso-ignore:vglayout2'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td colspan=2 height=38 class=xl16915340 width=157 style='border-right:
+    .5pt solid black;height:28.5pt;width:118pt'>&nbsp;</td>
+   </tr>
+  </table>
+  </span></td>
+ </tr>
+ <tr height=32 style='mso-height-source:userset;height:24.0pt'>
+  <td rowspan=2 height=92 class=xl14915340 width=110 style='border-bottom:.5pt solid black;
+  height:69.0pt;border-top:none;width:83pt'>Parâmetros:</td>
+  <td class=xl7515340 width=67 style='border-top:none;border-left:none;
+  width:50pt'>Glic</td>
+  <td class=xl7615340 style='border-top:none;border-left:none'>ECG</td>
+  <td class=xl7715340 width=68 style='border-top:none;border-left:none;
+  width:51pt'>Pulso</td>
+  <td class=xl7515340 width=54 style='border-top:none;border-left:none;
+  width:41pt'>Reg</td>
+  <td class=xl7515340 width=45 style='border-top:none;border-left:none;
+  width:34pt'>Irreg.</td>
+  <td class=xl7515340 width=45 style='border-top:none;border-left:none;
+  width:34pt'>SO2</td>
+  <td class=xl7515340 width=74 style='border-top:none;border-left:none;
+  width:56pt'>AA</td>
+  <td class=xl7515340 width=47 style='border-top:none;border-left:none;
+  width:35pt'>c/ O2</td>
+  <td class=xl7515340 width=68 style='border-top:none;border-left:none;
+  width:51pt'>Temp</td>
+  <td class=xl7515340 width=76 style='border-top:none;border-left:none;
+  width:57pt'>Dor</td>
+  <td class=xl7415340 width=81 style='border-top:none;width:61pt'>PA</td>
+ </tr>
+ <tr height=60 style='mso-height-source:userset;height:45.0pt'>
+  <td height=60 class=xl7815340 width=67 style='height:45.0pt;border-left:none;
+  width:50pt'>{% render_field form.Glic size=5 %}</td>
+  <td class=xl7815340 width=54 style='border-left:none;width:41pt'>{% render_field form.ECG size=3 %}</td>
+  <td class=xl7815340 width=68 style='border-left:none;width:51pt'>{% render_field form.Pulso size=5 %}</td>
+  <td class=xl7815340 width=54 style='border-left:none;width:41pt'>{% render_field form.Reg size=2 %}</td>
+  <td class=xl7815340 width=45 style='border-left:none;width:34pt'>{% render_field form.Irreg size=1.5 %}</td>
+  <td class=xl8115340 width=45 style='border-left:none;width:34pt'>{% render_field form.SO2 size=1.5 %}</td>
+  <td class=xl7815340 width=74 style='border-left:none;width:56pt'>{% render_field form.AA size=5 %}</td>
+  <td class=xl7815340 width=47 style='border-left:none;width:35pt'>{% render_field form.O2 size=2 %}</td>
+  <td class=xl7815340 width=68 style='border-left:none;width:51pt'>{% render_field form.Temp size=5 %}</td>
+  <td class=xl7815340 width=76 style='border-left:none;width:57pt'>{% render_field form.Dor size=5 %}</td>
+  <td class=xl7815340 width=81 style='border-left:none;width:61pt'>{% render_field form.PA size=5 %}</td>
+ </tr>
+ <tr height=42 style='mso-height-source:userset;height:32.1pt'>
+  <td rowspan=2 height=108 class=xl14915340 width=110 style='border-bottom:
+  .5pt solid black;height:82.2pt;border-top:none;width:83pt'>Prioridade Clínica</td>
+  <td colspan=11.8 class=xl16615340 style='border-right:.5pt solid black;
+  border-left:none'>{{form.prioridade}}</td>
+ </tr>
+ <tr height=66 style='mso-height-source:userset;height:50.1pt'>
+  <td colspan=2 height=66 class=xl15715340 width=121 style='border-right:.5pt solid black;
+  height:50.1pt;border-left:none;width:91pt'>Observação</td>
+  <td colspan=9 class=xl15915340 width=558 style='border-left:none;width:420pt'>
+  	{%render_field form.ObsPrioridade cols="70" rows="3.5" %}
+  </td>
+ </tr>
+ <tr height=84 style='mso-height-source:userset;height:63.0pt'>
+  <td height=84 class=xl6815340 width=110 style='height:63.0pt;border-top:none;
+  width:83pt'>Classificador</td>
+  <td colspan=7 class=xl8215340 width=407 style='border-right:.5pt solid black;
+  border-left:none;width:307pt'>{{form.Classificador}}</td>
+  <td colspan=2 class=xl8515340 width=115 style='border-right:.5pt solid black;
+  border-left:none;width:86pt'>Hora fim CR</td>
+  <td colspan=2 class=xl8715340 width=157 style='border-left:none;width:118pt'><input type="time" name="{{form.HoraFimCR.name}}"   id="{{ form.HoraFimCR.id_for_label }}" /></td>
+ </tr>
+ <tr height=38 style='mso-height-source:userset;height:29.1pt'>
+  <td height=38 class=xl8015340 width=110 style='height:29.1pt;border-top:none;
+  width:83pt'>Reclassificação:</td>
+  <td colspan=2 class=xl10515340 width=121 style='border-left:none;width:91pt'>Discriminador:</td>
+  <td colspan=9 class=xl10615340 width=558 style='border-right:.5pt solid black;
+  border-left:none;width:420pt'>{{form.Discriminador2}}</td>
+ </tr>
+ <tr height=29 style='mso-height-source:userset;height:21.75pt'>
+  <td height=29 class=xl6815340 width=110 style='height:21.75pt;width:83pt'>Hora</td>
+  <td colspan=2 rowspan=2 class=xl10315340 width=121 style='width:91pt'>Prioridade:</td>
+  <td colspan=9 rowspan=2 class=xl9115340 style='border-right:.5pt solid black;
+  border-bottom:.5pt solid black'>{{form.prioridade2}}</td>
+  </tr>
+ <tr height=35 style='mso-height-source:userset;height:26.25pt'>
+  <td height=35 class=xl7915340 width=110 style='height:26.25pt;width:83pt'><input type="time" name="{{form.hora.name}}"   id="{{ form.hora.id_for_label }}" /></td>
+ </tr>
+ <tr height=29 style='mso-height-source:userset;height:21.95pt'>
+  <td rowspan=2 height=69 class=xl14115340 width=110 style='border-bottom:.5pt solid black;
+  height:51.95pt;width:83pt'>Fluxo interno</td>
+  <td colspan=11 rowspan=2 class=xl14215340 width=679 style='border-right:.5pt solid black;
+  border-bottom:.5pt solid black;width:511pt'>{%render_field form.FluxoInterno cols="70" rows="4" %}</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+ </tr>
+ <tr height=83 style='mso-height-source:userset;height:62.25pt'>
+  <td height=83 class=xl6815340 width=110 style='height:62.25pt;border-top:
+  none;width:83pt'>Classificador 2</td>
+  <td colspan=7 class=xl8215340 width=407 style='border-right:.5pt solid black;
+  border-left:none;width:307pt'>{{form.Classificador2}}</td>
+  <td colspan=2 class=xl8515340 width=115 style='border-right:.5pt solid black;
+  border-left:none;width:86pt'>Hora fim Reclassificação</td>
+  <td colspan=2 class=xl8715340 width=157 style='border-left:none;width:118pt'><input type="time" name="{{form.HoraFimReclass.name}}"  id="{{ form.HoraFimReclass.id_for_label }}" /></td>
+ </tr>
+ <tr height=27 style='mso-height-source:userset;height:20.25pt'>
+  <td colspan=12 height=27 class=xl13015340 width=789 style='border-right:.5pt solid black;
+  height:20.25pt;width:594pt'>Atendimento Médico</td>
+ </tr>
+ <tr height=33 style='mso-height-source:userset;height:24.75pt'>
+  <td colspan=3 height=33 class=xl13215340 width=231 style='height:24.75pt;
+  width:174pt'>Hora início Atend. Médico<span style='mso-spacerun:yes'> </span></td>
+  <td colspan=2 class=xl13315340 width=122 style='border-left:none;width:92pt' >&nbsp;</td>
+  <td colspan=4 class=xl13515340 width=211 style='border-right:.5pt solid black;
+  width:159pt'>Carimbo e Assinatura</td>
+  <td colspan=3 class=xl13815340 width=225 style='border-right:.5pt solid black;
+  border-left:none;width:169pt'>&nbsp;</td>
+ </tr>
+ 
+</table>
+
+
+</div>
+
+
+</form>
+</body>
+
+</html>

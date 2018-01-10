@@ -1,0 +1,399 @@
+[08/Jan/2018 17:45:27] "GET / HTTP/1.1" 302 0
+[08/Jan/2018 17:45:28] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 17:45:28] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 17:46:02] "POST /accounts/login/ HTTP/1.1" 302 0
+[08/Jan/2018 17:46:02] "GET / HTTP/1.1" 200 47303
+[08/Jan/2018 17:46:05] "GET /accounts/logout/ HTTP/1.1" 302 0
+[08/Jan/2018 17:46:05] "GET / HTTP/1.1" 302 0
+[08/Jan/2018 17:46:05] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 17:46:35] "GET / HTTP/1.1" 302 0
+[08/Jan/2018 17:46:35] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 17:46:52] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 17:46:59] "POST /accounts/login/ HTTP/1.1" 302 0
+[08/Jan/2018 17:47:00] "GET / HTTP/1.1" 200 47303
+[08/Jan/2018 17:47:02] "GET /accounts/logout/ HTTP/1.1" 302 0
+[08/Jan/2018 17:47:02] "GET / HTTP/1.1" 302 0
+[08/Jan/2018 17:47:02] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 17:47:12] "POST /accounts/login/ HTTP/1.1" 302 0
+[08/Jan/2018 17:47:12] "GET / HTTP/1.1" 200 47242
+[08/Jan/2018 17:47:15] "GET /accounts/logout/ HTTP/1.1" 302 0
+[08/Jan/2018 17:47:15] "GET / HTTP/1.1" 302 0
+[08/Jan/2018 17:47:15] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 17:52:10] "POST /accounts/login/ HTTP/1.1" 302 0
+[08/Jan/2018 17:52:10] "GET / HTTP/1.1" 200 47303
+[08/Jan/2018 17:54:01] "POST / HTTP/1.1" 302 0
+[08/Jan/2018 17:54:01] "GET / HTTP/1.1" 200 47303
+[08/Jan/2018 17:55:14] "GET /accounts/logout/ HTTP/1.1" 302 0
+[08/Jan/2018 17:55:14] "GET / HTTP/1.1" 302 0
+[08/Jan/2018 17:55:14] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 18:07:52] "GET / HTTP/1.1" 302 0
+[08/Jan/2018 18:07:52] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 18:07:53] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:25:12] "GET / HTTP/1.1" 302 0
+[08/Jan/2018 19:25:12] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:25:12] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 404 108
+[08/Jan/2018 19:25:12] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+[08/Jan/2018 19:25:12] "GET /static/css/style.css HTTP/1.1" 404 94
+[08/Jan/2018 19:25:12] "GET /favicon.ico HTTP/1.1" 404 85
+[08/Jan/2018 19:25:22] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+[08/Jan/2018 19:25:22] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 404 108
+[08/Jan/2018 19:25:22] "GET /static/css/style.css HTTP/1.1" 404 94
+[08/Jan/2018 19:25:24] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:25:24] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 404 108
+[08/Jan/2018 19:25:24] "GET /static/css/style.css HTTP/1.1" 404 94
+[08/Jan/2018 19:25:24] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+[08/Jan/2018 19:28:35] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:28:35] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+[08/Jan/2018 19:28:35] "GET /static/css/style.css HTTP/1.1" 404 94
+[08/Jan/2018 19:28:35] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 404 108
+[08/Jan/2018 19:28:45] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+[08/Jan/2018 19:31:40] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:31:40] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 404 108
+[08/Jan/2018 19:31:40] "GET /static/css/style.css HTTP/1.1" 404 94
+[08/Jan/2018 19:31:40] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+[08/Jan/2018 19:31:40] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:31:40] "GET /static/css/style.css HTTP/1.1" 404 94
+[08/Jan/2018 19:31:40] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 404 108
+[08/Jan/2018 19:31:40] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+[08/Jan/2018 19:31:41] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:31:41] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 404 108
+[08/Jan/2018 19:31:41] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+[08/Jan/2018 19:31:41] "GET /static/css/style.css HTTP/1.1" 404 94
+[08/Jan/2018 19:32:00] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:32:00] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 404 108
+[08/Jan/2018 19:32:00] "GET /static/css/style.css HTTP/1.1" 404 94
+[08/Jan/2018 19:32:00] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+[08/Jan/2018 19:32:00] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:32:00] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+[08/Jan/2018 19:32:00] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 404 108
+[08/Jan/2018 19:32:00] "GET /static/css/style.css HTTP/1.1" 404 94
+[08/Jan/2018 19:32:01] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:32:01] "GET /static/css/style.css HTTP/1.1" 404 94
+[08/Jan/2018 19:32:01] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 404 108
+[08/Jan/2018 19:32:01] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+[08/Jan/2018 19:32:01] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:32:01] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+[08/Jan/2018 19:32:01] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 404 108
+[08/Jan/2018 19:32:01] "GET /static/css/style.css HTTP/1.1" 404 94
+[08/Jan/2018 19:32:01] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:32:01] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+[08/Jan/2018 19:32:01] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 404 108
+[08/Jan/2018 19:32:01] "GET /static/css/style.css HTTP/1.1" 404 94
+[08/Jan/2018 19:32:02] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:32:02] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 404 108
+[08/Jan/2018 19:32:02] "GET /static/css/style.css HTTP/1.1" 404 94
+[08/Jan/2018 19:32:02] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+[08/Jan/2018 19:32:02] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:32:02] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 404 108
+[08/Jan/2018 19:32:02] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+[08/Jan/2018 19:32:02] "GET /static/css/style.css HTTP/1.1" 404 94
+[08/Jan/2018 19:32:02] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:32:02] "GET /static/css/style.css HTTP/1.1" 404 94
+[08/Jan/2018 19:32:02] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+[08/Jan/2018 19:32:02] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 404 108
+[08/Jan/2018 19:32:02] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:32:02] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+[08/Jan/2018 19:32:02] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 404 108
+[08/Jan/2018 19:32:02] "GET /static/css/style.css HTTP/1.1" 404 94
+[08/Jan/2018 19:32:02] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:32:02] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+[08/Jan/2018 19:32:02] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 404 108
+[08/Jan/2018 19:32:02] "GET /static/css/style.css HTTP/1.1" 404 94
+[08/Jan/2018 19:32:02] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:32:02] "GET /static/css/style.css HTTP/1.1" 404 94
+[08/Jan/2018 19:32:02] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 404 108
+[08/Jan/2018 19:32:02] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+[08/Jan/2018 19:32:03] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:32:03] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+[08/Jan/2018 19:32:03] "GET /static/css/style.css HTTP/1.1" 404 94
+[08/Jan/2018 19:32:03] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 404 108
+[08/Jan/2018 19:32:03] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:32:03] "GET /static/css/style.css HTTP/1.1" 404 94
+[08/Jan/2018 19:32:03] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 404 108
+[08/Jan/2018 19:32:03] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+[08/Jan/2018 19:32:03] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:32:03] "GET /static/css/style.css HTTP/1.1" 404 94
+[08/Jan/2018 19:32:03] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 404 108
+[08/Jan/2018 19:32:03] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+[08/Jan/2018 19:32:03] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:32:03] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+[08/Jan/2018 19:32:03] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 404 108
+[08/Jan/2018 19:32:03] "GET /static/css/style.css HTTP/1.1" 404 94
+[08/Jan/2018 19:41:06] "GET / HTTP/1.1" 302 0
+[08/Jan/2018 19:41:06] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:41:07] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:41:08] "GET /favicon.ico HTTP/1.1" 404 85
+[08/Jan/2018 19:46:20] "GET / HTTP/1.1" 302 0
+[08/Jan/2018 19:46:20] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:46:20] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+[08/Jan/2018 19:46:20] "GET /static/css/style.css HTTP/1.1" 404 94
+[08/Jan/2018 19:46:20] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 404 108
+[08/Jan/2018 19:46:28] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+[08/Jan/2018 19:46:28] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 404 108
+[08/Jan/2018 19:46:28] "GET /static/css/style.css HTTP/1.1" 404 94
+[08/Jan/2018 19:46:58] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+[08/Jan/2018 19:47:16] "GET /css/bootstrap.min.css HTTP/1.1" 404 95
+[08/Jan/2018 19:47:19] "GET /bootstrap.min.css HTTP/1.1" 404 91
+[08/Jan/2018 19:48:06] "GET / HTTP/1.1" 302 0
+[08/Jan/2018 19:48:06] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:48:09] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:48:40] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:49:09] "GET /accounts/login/static/css/bootstrap.min.css HTTP/1.1" 404 117
+[08/Jan/2018 19:49:31] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+[08/Jan/2018 19:49:44] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+[08/Jan/2018 19:50:13] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+[08/Jan/2018 19:50:14] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+[08/Jan/2018 19:51:36] "GET / HTTP/1.1" 302 0
+[08/Jan/2018 19:51:36] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:51:36] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 404 108
+[08/Jan/2018 19:51:36] "GET /static/css/style.css HTTP/1.1" 404 94
+[08/Jan/2018 19:51:36] "GET /static/css/bootstrap.min.css HTTP/1.1" 404 102
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 08, 2018 - 17:46:29
+Django version 2.0.1, using settings 'manchester.settings'
+Starting development server at http://0.0.0.0:6878/
+Quit the server with CONTROL-C.
+Traceback (most recent call last):
+  File "manage.py", line 17, in <module>
+    "Couldn't import Django. Are you sure it's installed and "
+ImportError: Couldn't import Django. Are you sure it's installed and available on your PYTHONPATH environment variable? Did you forget to activate a virtual environment?
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x7efd5ccd7730>
+Traceback (most recent call last):
+  File "/home/dalton/virtual/lib/python3.5/site-packages/django/utils/autoreload.py", line 225, in wrapper
+    fn(*args, **kwargs)
+  File "/home/dalton/virtual/lib/python3.5/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run
+    autoreload.raise_last_exception()
+  File "/home/dalton/virtual/lib/python3.5/site-packages/django/utils/autoreload.py", line 248, in raise_last_exception
+    raise _exception[1]
+  File "/home/dalton/virtual/lib/python3.5/site-packages/django/core/management/__init__.py", line 327, in execute
+    autoreload.check_errors(django.setup)()
+  File "/home/dalton/virtual/lib/python3.5/site-packages/django/utils/autoreload.py", line 225, in wrapper
+    fn(*args, **kwargs)
+  File "/home/dalton/virtual/lib/python3.5/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/dalton/virtual/lib/python3.5/site-packages/django/apps/registry.py", line 112, in populate
+    app_config.import_models()
+  File "/home/dalton/virtual/lib/python3.5/site-packages/django/apps/config.py", line 198, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/home/dalton/virtual/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/dalton/virtual/lib/python3.5/site-packages/django/contrib/auth/models.py", line 94, in <module>
+    class Group(models.Model):
+  File "/home/dalton/virtual/lib/python3.5/site-packages/django/db/models/base.py", line 152, in __new__
+    new_class.add_to_class(obj_name, obj)
+  File "/home/dalton/virtual/lib/python3.5/site-packages/django/db/models/base.py", line 315, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "/home/dalton/virtual/lib/python3.5/site-packages/django/db/models/fields/related.py", line 1586, in contribute_to_class
+    self.remote_field.through = create_many_to_many_intermediary_model(self, cls)
+  File "/home/dalton/virtual/lib/python3.5/site-packages/django/db/models/fields/related.py", line 1051, in create_many_to_many_intermediary_model
+    'verbose_name': _('%(from)s-%(to)s relationship') % {'from': from_, 'to': to},
+  File "/home/dalton/virtual/lib/python3.5/site-packages/django/utils/functional.py", line 148, in __mod__
+    return str(self) % rhs
+  File "/home/dalton/virtual/lib/python3.5/site-packages/django/utils/functional.py", line 112, in __text_cast
+    return func(*self.__args, **self.__kw)
+  File "/home/dalton/virtual/lib/python3.5/site-packages/django/utils/translation/__init__.py", line 77, in gettext
+    return _trans.gettext(message)
+  File "/home/dalton/virtual/lib/python3.5/site-packages/django/utils/translation/trans_real.py", line 312, in gettext
+    _default = _default or translation(settings.LANGUAGE_CODE)
+  File "/home/dalton/virtual/lib/python3.5/site-packages/django/utils/translation/trans_real.py", line 221, in translation
+    _translations[language] = DjangoTranslation(language)
+  File "/home/dalton/virtual/lib/python3.5/site-packages/django/utils/translation/trans_real.py", line 127, in __init__
+    raise IOError("No translation files found for default language %s." % settings.LANGUAGE_CODE)
+OSError: No translation files found for default language America/Campo_Grande.
+CommandError: "0.0.0.0:6878$" is not a valid port number or address:port pair.
+CommandError: "0.0.0.0:6878$" is not a valid port number or address:port pair.
+CommandError: "0.0.0.0:6878$" is not a valid port number or address:port pair.
+[08/Jan/2018 17:39:23] "GET / HTTP/1.1" 302 0
+[08/Jan/2018 17:39:23] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 17:39:24] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 200 18860
+[08/Jan/2018 17:39:24] "GET /static/css/style.css HTTP/1.1" 200 826
+[08/Jan/2018 17:39:24] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 109518
+[08/Jan/2018 17:39:32] "POST /accounts/login/ HTTP/1.1" 302 0
+[08/Jan/2018 17:39:32] "GET / HTTP/1.1" 200 47291
+[08/Jan/2018 17:39:32] "GET /static/css/Formulario.css HTTP/1.1" 200 59387
+[08/Jan/2018 17:39:32] "GET /static/image/Banco_de_dados_CR_15340_image003.gif HTTP/1.1" 200 3303
+[08/Jan/2018 17:39:32] "GET /static/image/Banco_de_dados_CR_15340_image004.gif HTTP/1.1" 200 3099
+[08/Jan/2018 17:39:36] "GET /admin/ HTTP/1.1" 200 9228
+[08/Jan/2018 17:39:36] "GET /static/admin/css/base.css HTTP/1.1" 200 16106
+[08/Jan/2018 17:39:36] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+[08/Jan/2018 17:39:36] "GET /static/admin/css/responsive.css HTTP/1.1" 200 17894
+[08/Jan/2018 17:39:36] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[08/Jan/2018 17:39:36] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+[08/Jan/2018 17:39:36] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+[08/Jan/2018 17:39:36] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+[08/Jan/2018 17:39:36] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[08/Jan/2018 17:39:36] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[08/Jan/2018 17:39:36] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[08/Jan/2018 17:39:38] "GET /admin/logout/ HTTP/1.1" 200 1222
+[08/Jan/2018 19:54:58] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 109518
+[08/Jan/2018 19:55:00] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:55:00] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 200 18860
+[08/Jan/2018 19:55:00] "GET /static/css/style.css HTTP/1.1" 200 826
+[08/Jan/2018 19:55:04] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:55:06] "GET / HTTP/1.1" 302 0
+[08/Jan/2018 19:55:06] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[08/Jan/2018 19:55:08] "GET / HTTP/1.1" 302 0
+[08/Jan/2018 19:55:08] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[09/Jan/2018 07:47:05] "GET / HTTP/1.1" 302 0
+[09/Jan/2018 07:47:05] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[09/Jan/2018 07:47:05] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 200 18860
+[09/Jan/2018 07:47:05] "GET /static/css/style.css HTTP/1.1" 200 826
+[09/Jan/2018 07:47:05] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 109518
+[09/Jan/2018 07:47:05] "GET /favicon.ico HTTP/1.1" 404 85
+[09/Jan/2018 08:30:57] "GET / HTTP/1.1" 302 0
+[09/Jan/2018 08:30:57] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[09/Jan/2018 08:30:58] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 200 18860
+[09/Jan/2018 08:30:58] "GET /static/css/style.css HTTP/1.1" 200 826
+[09/Jan/2018 08:30:58] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 109518
+[09/Jan/2018 08:31:05] "POST /accounts/login/ HTTP/1.1" 302 0
+[09/Jan/2018 08:31:05] "GET / HTTP/1.1" 200 47291
+[09/Jan/2018 08:31:05] "GET /static/image/Banco_de_dados_CR_15340_image003.gif HTTP/1.1" 200 3303
+[09/Jan/2018 08:31:05] "GET /static/css/Formulario.css HTTP/1.1" 200 59387
+[09/Jan/2018 08:31:05] "GET /static/image/Banco_de_dados_CR_15340_image004.gif HTTP/1.1" 200 3099
+[09/Jan/2018 08:33:19] "POST / HTTP/1.1" 302 0
+[09/Jan/2018 08:33:19] "GET / HTTP/1.1" 200 47291
+[09/Jan/2018 08:33:19] "GET /static/css/Formulario.css HTTP/1.1" 304 0
+[09/Jan/2018 08:33:19] "GET /static/image/Banco_de_dados_CR_15340_image003.gif HTTP/1.1" 304 0
+[09/Jan/2018 08:33:19] "GET /static/image/Banco_de_dados_CR_15340_image004.gif HTTP/1.1" 304 0
+[09/Jan/2018 08:33:22] "GET /admin/ HTTP/1.1" 200 9228
+[09/Jan/2018 08:33:22] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+[09/Jan/2018 08:33:22] "GET /static/admin/css/base.css HTTP/1.1" 200 16106
+[09/Jan/2018 08:33:22] "GET /static/admin/css/responsive.css HTTP/1.1" 200 17894
+[09/Jan/2018 08:33:22] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[09/Jan/2018 08:33:22] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+[09/Jan/2018 08:33:22] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+[09/Jan/2018 08:33:22] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+[09/Jan/2018 08:33:22] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[09/Jan/2018 08:33:22] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[09/Jan/2018 08:33:22] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[09/Jan/2018 08:33:23] "GET /admin/formulario/paciente/ HTTP/1.1" 200 7009
+[09/Jan/2018 08:33:23] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6897
+[09/Jan/2018 08:33:23] "GET /admin/jsi18n/ HTTP/1.1" 200 7237
+[09/Jan/2018 08:33:23] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+[09/Jan/2018 08:33:23] "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 200 85659
+[09/Jan/2018 08:33:23] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6170
+[09/Jan/2018 08:33:23] "GET /static/admin/js/core.js HTTP/1.1" 200 7134
+[09/Jan/2018 08:33:23] "GET /static/admin/js/actions.min.js HTTP/1.1" 200 3161
+[09/Jan/2018 08:33:23] "GET /static/admin/js/urlify.js HTTP/1.1" 200 8729
+[09/Jan/2018 08:33:23] "GET /static/admin/js/prepopulate.min.js HTTP/1.1" 200 372
+[09/Jan/2018 08:33:23] "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 200 62474
+[09/Jan/2018 08:33:23] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[09/Jan/2018 08:33:23] "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+[09/Jan/2018 08:33:33] "GET /admin/logout/ HTTP/1.1" 200 1222
+[09/Jan/2018 08:33:38] "GET / HTTP/1.1" 302 0
+[09/Jan/2018 08:33:38] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[09/Jan/2018 08:33:38] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[09/Jan/2018 08:33:38] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 304 0
+[09/Jan/2018 08:33:38] "GET /static/css/style.css HTTP/1.1" 304 0
+[09/Jan/2018 10:00:08] "GET / HTTP/1.1" 302 0
+[09/Jan/2018 10:00:08] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[09/Jan/2018 10:00:09] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[09/Jan/2018 10:00:09] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 304 0
+[09/Jan/2018 10:00:09] "GET /static/css/style.css HTTP/1.1" 304 0
+[09/Jan/2018 11:33:01] "GET / HTTP/1.1" 302 0
+[09/Jan/2018 11:33:01] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[09/Jan/2018 11:33:02] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[09/Jan/2018 11:33:02] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 304 0
+[09/Jan/2018 11:33:02] "GET /static/css/style.css HTTP/1.1" 304 0
+[09/Jan/2018 11:33:15] "POST /accounts/login/ HTTP/1.1" 302 0
+[09/Jan/2018 11:33:15] "GET / HTTP/1.1" 200 47291
+[09/Jan/2018 11:33:15] "GET /static/css/Formulario.css HTTP/1.1" 304 0
+[09/Jan/2018 11:33:15] "GET /static/image/Banco_de_dados_CR_15340_image003.gif HTTP/1.1" 304 0
+[09/Jan/2018 11:33:15] "GET /static/image/Banco_de_dados_CR_15340_image004.gif HTTP/1.1" 304 0
+[09/Jan/2018 11:33:42] "GET /accounts/logout/ HTTP/1.1" 302 0
+[09/Jan/2018 11:33:42] "GET / HTTP/1.1" 302 0
+[09/Jan/2018 11:33:42] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[09/Jan/2018 11:33:53] "POST /accounts/login/ HTTP/1.1" 302 0
+[09/Jan/2018 11:33:53] "GET / HTTP/1.1" 200 47291
+[09/Jan/2018 11:33:55] "GET /admin/ HTTP/1.1" 200 9228
+[09/Jan/2018 11:33:55] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[09/Jan/2018 11:33:55] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[09/Jan/2018 11:33:55] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[09/Jan/2018 11:33:55] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[09/Jan/2018 11:33:55] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+[09/Jan/2018 11:33:55] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[09/Jan/2018 11:33:55] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[09/Jan/2018 11:33:55] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+[09/Jan/2018 11:33:55] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+[09/Jan/2018 11:33:55] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[09/Jan/2018 11:33:56] "GET /admin/formulario/paciente/ HTTP/1.1" 200 7009
+[09/Jan/2018 11:33:56] "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[09/Jan/2018 11:33:56] "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 304 0
+[09/Jan/2018 11:33:56] "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[09/Jan/2018 11:33:56] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[09/Jan/2018 11:33:56] "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[09/Jan/2018 11:33:56] "GET /admin/jsi18n/ HTTP/1.1" 200 7237
+[09/Jan/2018 11:33:56] "GET /static/admin/js/actions.min.js HTTP/1.1" 304 0
+[09/Jan/2018 11:33:56] "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[09/Jan/2018 11:33:56] "GET /static/admin/js/prepopulate.min.js HTTP/1.1" 304 0
+[09/Jan/2018 11:33:56] "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 304 0
+[09/Jan/2018 11:33:56] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+[09/Jan/2018 11:33:56] "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+[09/Jan/2018 11:34:07] "GET /admin/formulario/ HTTP/1.1" 200 5264
+[09/Jan/2018 11:34:10] "GET /admin/formulario/dimclassificador/ HTTP/1.1" 200 10475
+[09/Jan/2018 11:34:10] "GET /admin/jsi18n/ HTTP/1.1" 200 7237
+[09/Jan/2018 11:34:15] "GET /admin/formulario/dimclassificador/add/ HTTP/1.1" 200 4250
+[09/Jan/2018 11:34:15] "GET /static/admin/css/forms.css HTTP/1.1" 200 8173
+[09/Jan/2018 11:34:15] "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+[09/Jan/2018 11:34:15] "GET /admin/jsi18n/ HTTP/1.1" 200 7237
+[09/Jan/2018 11:34:15] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+[09/Jan/2018 11:34:15] "GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+[09/Jan/2018 11:34:20] "POST /admin/formulario/dimclassificador/add/ HTTP/1.1" 302 0
+[09/Jan/2018 11:34:20] "GET /admin/formulario/dimclassificador/ HTTP/1.1" 200 10926
+[09/Jan/2018 11:34:20] "GET /admin/jsi18n/ HTTP/1.1" 200 7237
+[09/Jan/2018 11:34:20] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[09/Jan/2018 11:34:22] "GET / HTTP/1.1" 200 47373
+[09/Jan/2018 11:34:22] "GET /static/css/Formulario.css HTTP/1.1" 304 0
+[09/Jan/2018 11:34:22] "GET /static/image/Banco_de_dados_CR_15340_image003.gif HTTP/1.1" 304 0
+[09/Jan/2018 11:34:22] "GET /static/image/Banco_de_dados_CR_15340_image004.gif HTTP/1.1" 304 0
+[09/Jan/2018 11:34:31] "GET /admin/ HTTP/1.1" 200 9283
+[09/Jan/2018 11:34:34] "GET /admin/formulario/dimdiscriminador/ HTTP/1.1" 200 30226
+[09/Jan/2018 11:34:34] "GET /admin/jsi18n/ HTTP/1.1" 200 7237
+[09/Jan/2018 11:34:38] "GET /admin/formulario/ HTTP/1.1" 200 5264
+[09/Jan/2018 11:34:41] "GET /admin/formulario/dimclassificador/ HTTP/1.1" 200 10715
+[09/Jan/2018 11:34:41] "GET /admin/jsi18n/ HTTP/1.1" 200 7237
+[09/Jan/2018 11:34:46] "POST /admin/formulario/dimclassificador/ HTTP/1.1" 200 3499
+[09/Jan/2018 11:34:46] "GET /static/admin/js/cancel.js HTTP/1.1" 200 204
+[09/Jan/2018 11:34:47] "POST /admin/formulario/dimclassificador/ HTTP/1.1" 302 0
+[09/Jan/2018 11:34:47] "GET /admin/formulario/dimclassificador/ HTTP/1.1" 200 10608
+[09/Jan/2018 11:34:47] "GET /admin/jsi18n/ HTTP/1.1" 200 7237
+[09/Jan/2018 11:34:48] "GET / HTTP/1.1" 200 47291
+[09/Jan/2018 11:34:53] "GET /accounts/logout/ HTTP/1.1" 302 0
+[09/Jan/2018 11:34:53] "GET / HTTP/1.1" 302 0
+[09/Jan/2018 11:34:53] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[09/Jan/2018 11:34:53] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[09/Jan/2018 11:34:53] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 304 0
+[09/Jan/2018 11:34:53] "GET /static/css/style.css HTTP/1.1" 304 0
+[10/Jan/2018 11:06:48] "GET / HTTP/1.1" 302 0
+[10/Jan/2018 11:06:48] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[10/Jan/2018 11:06:49] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Jan/2018 11:06:49] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 304 0
+[10/Jan/2018 11:06:49] "GET /static/css/style.css HTTP/1.1" 304 0
+[10/Jan/2018 11:06:49] "GET /favicon.ico HTTP/1.1" 404 85
+[10/Jan/2018 11:12:30] "GET / HTTP/1.1" 302 0
+[10/Jan/2018 11:12:30] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[10/Jan/2018 11:12:30] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Jan/2018 11:12:30] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 304 0
+[10/Jan/2018 11:12:30] "GET /static/css/style.css HTTP/1.1" 304 0
+[10/Jan/2018 11:12:52] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[10/Jan/2018 11:14:14] "GET / HTTP/1.1" 302 0
+[10/Jan/2018 11:14:14] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[10/Jan/2018 11:14:14] "GET /static/css/style.css HTTP/1.1" 200 826
+[10/Jan/2018 11:14:14] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 200 18860
+[10/Jan/2018 11:14:14] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 109518
+[10/Jan/2018 11:14:14] "GET /favicon.ico HTTP/1.1" 404 85
+[10/Jan/2018 11:14:15] "GET /favicon.ico HTTP/1.1" 404 85
+[10/Jan/2018 11:15:23] "GET / HTTP/1.1" 302 0
+[10/Jan/2018 11:15:23] "GET /accounts/login/?next=/ HTTP/1.1" 200 1324
+[10/Jan/2018 11:15:23] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 109518
+[10/Jan/2018 11:15:23] "GET /static/css/bootstrap-theme.min.css HTTP/1.1" 200 18860
+[10/Jan/2018 11:15:23] "GET /static/css/style.css HTTP/1.1" 200 826
+[10/Jan/2018 11:15:23] "GET /favicon.ico HTTP/1.1" 404 85
