@@ -1,5 +1,8 @@
 {% load staticfiles %}
 {% load widget_tweaks %}
+
+<!DOCTYPE html>
+
 <html xmlns:v="urn:schemas-microsoft-com:vml"
 xmlns:o="urn:schemas-microsoft-com:office:office"
 xmlns:x="urn:schemas-microsoft-com:office:excel"
@@ -19,6 +22,7 @@ xmlns="http://www.w3.org/TR/REC-html40">
 		if (a){
 			window.print();
 		}
+    document.getElementById("form1").submit(); 
 	}
 
 
@@ -57,12 +61,13 @@ entre as marcas DIV serão substituídas.-->
 <!--INÍCIO DA SAÍDA DO 'ASSISTENTE PARA PUBLICAÇÃO COMO PÁGINA DA WEB' DO EXCEL
 -->
 
-<form method="POST" class="post-form" onsubmit="ImprimeForm()">{% csrf_token %}
+<form id="form1" method="POST" class="post-form" onsubmit="ImprimeForm();" >{% csrf_token %}
 <div id="botoes" align=left>
 	<button type="submit" class="save btn btn-default" >Registrar</button>
 	<button type="reset" value="Reset">Limpar</button>
 	<input type="checkbox" id="imprime" checked > imprime página <br>
 	<small>(<a href="{% url 'logout' %}">sair</a>)</small>
+  <small>(<a href="{% url 'grafico' %}">graficos</a>)</small>
   {% if user.is_superuser %}
     <small>(<a href="{% url 'admin:index' %}">Administrativo</a>)</small>
   {% endif %}
@@ -177,7 +182,7 @@ entre as marcas DIV serão substituídas.-->
   <td colspan=2 class=xl12915340 width=122 style='border-left:none;width:92pt'>Data
   de nascimento</td>
   <td colspan=3 class=xl12115340 width=164 style='border-right:.5pt solid black;
-  border-left:none;width:124pt'><input type="Date" name="{{form.DataNascimento.name}}" onblur='CalcIdade();' required id="{{ form.DataNascimento.id_for_label }}" /></td>
+  border-left:none;width:124pt'><input type="Date" name="{{form.DataNascimento.name}}" onfocusout ='CalcIdade();' required id="{{ form.DataNascimento.id_for_label }}" /></td>
   <td colspan=2 class=xl12915340 width=115 style='border-left:none;width:86pt'>Idade</td>
   <td colspan=2 class=xl13015340 width=157 style='border-right:.5pt solid black;
   border-left:none;width:118pt'>{% render_field form.Idade id="Idade"   max=1000%}</td>
@@ -205,7 +210,7 @@ entre as marcas DIV serão substituídas.-->
   <td rowspan=2 height=40 class=xl15415340 width=110 style='border-bottom:.5pt solid black;
   height:30.0pt;border-top:none;width:83pt'>Queixa</td>
   <td colspan=11 rowspan=2 class=xl16015340 width=679 style='border-right:.5pt solid black;
-  border-bottom:.5pt solid black;width:511pt'>{%render_field form.Queixa  cols="80" rows="1.9" %}</td>
+  border-bottom:.5pt solid black;width:511pt'>{%render_field form.Queixa  cols="90" rows="3" %}</td>
  </tr>
  <tr height=20 style='mso-height-source:userset;height:15.0pt'>
  </tr>
@@ -219,7 +224,7 @@ entre as marcas DIV serão substituídas.-->
   <td height=38 class=xl6715340 width=110 style='height:28.5pt;border-top:none;
   width:83pt'>Discriminador</td>
   <td colspan=9 class=xl8915340 width=522 style='border-left:none;width:393pt'>
-  	{%render_field form.Discriminador %}
+  	{%render_field form.Discriminador  %}
   </td>
   <td colspan=2 height=38 width=157 style='border-right:.5pt solid black;
   height:28.5pt;width:118pt' align=left valign=top>
@@ -283,14 +288,14 @@ entre as marcas DIV serão substituídas.-->
   <td colspan=2 height=66 class=xl15715340 width=121 style='border-right:.5pt solid black;
   height:50.1pt;border-left:none;width:91pt'>Observação</td>
   <td colspan=9 class=xl15915340 width=558 style='border-left:none;width:420pt'>
-  	{%render_field form.ObsPrioridade cols="70" rows="3.5" %}
+  	{%render_field form.ObsPrioridade cols="60" rows="3.5" %}
   </td>
  </tr>
  <tr height=84 style='mso-height-source:userset;height:63.0pt'>
   <td height=84 class=xl6815340 width=110 style='height:63.0pt;border-top:none;
   width:83pt'>Classificador</td>
   <td colspan=7 class=xl8215340 width=407 style='border-right:.5pt solid black;
-  border-left:none;width:307pt'>{{form.Classificador}}</td>
+  border-left:none;width:307pt'>{%render_field form.Classificador  %}</td>
   <td colspan=2 class=xl8515340 width=115 style='border-right:.5pt solid black;
   border-left:none;width:86pt'>Hora fim CR</td>
   <td colspan=2 class=xl8715340 width=157 style='border-left:none;width:118pt'><input type="time" name="{{form.HoraFimCR.name}}"   id="{{ form.HoraFimCR.id_for_label }}" /></td>

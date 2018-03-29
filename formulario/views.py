@@ -23,3 +23,14 @@ def RegistraPaciente(request):
 
 
    
+def grafico(request):
+    tab=Paciente.objects.raw('select id,prioridade,count(*)as qt from formulario_paciente group by prioridade')
+    tab2=Paciente.objects.raw("select id,strftime('%Y%m', Data)as AnoMes ,sum(case prioridade    when 'AMARELO' then 1    else  0 end) as amarelo, \
+        sum(case prioridade    when 'AZUL' then 1    else  0 end) as azul,sum(case prioridade    when 'BRANCO' then 1    else  0 end) as branco, \
+        sum(case prioridade  when 'LARANJA' then 1   else  0 end) as laranja,sum(case prioridade    when 'VERDE' then 1    else  0 end) as verde, \
+        sum(case prioridade  when 'VERMELHO' then 1    else  0 end) as vermelho from formulario_paciente group by 2")
+    context = {
+        'valor': tab,
+        'valor2':tab2
+    }
+    return render(request,'graficos.html',context)

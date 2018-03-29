@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^$', views.RegistraPaciente,name="RegistraPaciente"),
     url(r'^accounts/login/$', Views.login, name='login'),
     url(r'^accounts/logout/$', Views.logout, name='logout', kwargs={'next_page': '/'}), 
+    url(r'^grafico/$', views.grafico,name="grafico"),
 	#url(r'^r$', views.RegistraPaciente,name="formulario"),
 ]
 

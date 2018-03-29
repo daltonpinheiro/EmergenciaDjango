@@ -124,6 +124,9 @@ class Paciente(models.Model):
 	FluxoInterno=models.TextField(max_length=100,null=True,blank=True)
 	Classificador2=models.ForeignKey(DimClassificador,verbose_name="Classificador 2",on_delete=models.CASCADE,related_name="Classificador2",blank=True,null=True)
 	HoraFimReclass=models.TimeField("Hora Fim da Reclassificação",blank=True,null=True)
+	'''Campos adicionados devido a erros de preenchimento na ficha'''
+	created_at = models.DateTimeField(auto_now_add=True,blank=True,null=True)
+	updated_at = models.DateTimeField(auto_now=True,blank=True,null=True)
 	def __unicode__(self):
 		return str(self.Nome)
 	def __str__(self):

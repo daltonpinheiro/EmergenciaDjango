@@ -1,0 +1,88 @@
+{% load staticfiles %}
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load Charts and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Draw the pie chart for drawPizzaChart pizza when Charts is loaded.
+      google.charts.setOnLoadCallback(drawPizzaChart);
+
+      // Draw the pie chart for the linha pizza when Charts is loaded.
+      google.charts.setOnLoadCallback(drawLinhaChart);
+
+      // Callback that draws the pie chart forpizza.
+      function drawPizzaChart() {
+
+        // Create the data table for Sarah's pizza.
+        var data = google.visualization.arrayToDataTable([
+        ['Prioridade', 'Quantidade'],
+          {% for v in valor %}
+            ['{{v.prioridade}}',{{v.qt}}],
+          {% endfor %}
+        ]);
+
+
+        var options = {
+          title: 'Quantidade de fichas por prioridade clínica',
+           width: 700,
+          height: 400,
+          slices: {
+            0: { color: 'yellow' },
+            1: { color: 'blue' },
+            2: { color: 'grey' },
+            3: { color: 'orange' },
+            4: { color: 'green' },
+            5: { color: 'red' }
+          }
+        };
+
+        
+        var chart = new google.visualization.PieChart(document.getElementById('pizza_div'));
+        chart.draw(data, options);
+      }
+
+      
+      function drawLinhaChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['AnoMes', 'Amarelo','Azul','Branco','Laranja','Verde','Vermelho'],
+
+          {% for v in valor2 %}
+            ['{{v.AnoMes}}',{{v.amarelo}},{{v.azul}},{{v.branco}},{{v.laranja}},{{v.verde}},{{v.vermelho}}],
+          {% endfor %}
+
+          
+        ]);
+
+        var options = {
+          title: 'Fichas mês a mês',
+          series: {
+            0: { color: 'yellow' },
+            1: { color: 'blue' },
+            2: { color: 'grey' },
+            3: { color: 'orange' },
+            4: { color: 'green' },
+            5: { color: 'red' }
+          },
+          width: 700,
+          height: 400
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('linha_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <!--Table and divs that hold the pie charts-->
+    <table class="columns">
+      <tr>
+        <td><div id="pizza_div" style="border: 1px solid #ccc"></div></td>
+        <td><div id="linha_chart" style="border: 1px solid #ccc"></div></td>
+      </tr>
+    </table>
+  </body>
+</html>
