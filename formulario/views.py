@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from .models import Paciente
 from .forms import FormPaciente
 from django.contrib.auth.decorators import login_required,permission_required
+import time
 
 def mostra(request):
 	return(render(request,"teste.html",{}))
@@ -28,9 +29,12 @@ def grafico(request):
     tab2=Paciente.objects.raw("select id,strftime('%Y%m', Data)as AnoMes ,sum(case prioridade    when 'AMARELO' then 1    else  0 end) as amarelo, \
         sum(case prioridade    when 'AZUL' then 1    else  0 end) as azul,sum(case prioridade    when 'BRANCO' then 1    else  0 end) as branco, \
         sum(case prioridade  when 'LARANJA' then 1   else  0 end) as laranja,sum(case prioridade    when 'VERDE' then 1    else  0 end) as verde, \
-        sum(case prioridade  when 'VERMELHO' then 1    else  0 end) as vermelho from formulario_paciente group by 2")
+        sum(case prioridade  when 'VERMELHO' then 1    else  0 end) as vermelho, \
+        count(*)as qtde \
+        from formulario_paciente group by 2")
     context = {
+        'dia':time.strftime('dia %d-%m-%Y às %H:%M'),
         'valor': tab,
         'valor2':tab2
     }
-    return render(request,'graficos.html',context)
+    return render(request,'graficos_plotly.html',context)

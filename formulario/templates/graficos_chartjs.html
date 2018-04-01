@@ -1,0 +1,104 @@
+
+{% load staticfiles %}
+<!doctype html>
+<html>
+
+<head>
+  <title>Pie Chart</title>
+  <script src="{%static 'js/Chart.bundle.js' %}"></script>
+  <script src="{%static 'js/utils.js' %}"></script>
+</head>
+
+<body>
+  
+
+	<table class="columns">
+      <tr>
+        <td>
+        		<div id="pizza_div" style="border: 1px solid #ccc">
+        				<canvas id="chart-area" style="height:200px;width: content-box;"></canvas>
+        		</div></td>
+        <td><div id="linha_chart" style="border: 1px solid #ccc">
+        			
+        	</div></td>
+      </tr>
+    </table>
+  
+  <script>
+    var config = {
+      type: 'pie',
+      data: {
+        datasets: [{
+          data: [
+           {% for v in valor %}
+            {{v.qt}},
+           {% endfor %}
+          ],
+          backgroundColor: [
+            window.chartColors.yellow,
+            window.chartColors.blue,
+            window.chartColors.grey,
+            window.chartColors.orange,
+            window.chartColors.green,
+            window.chartColors.red,
+          ],
+          label: 'Prioridade Clínica'
+        }],
+        labels: [
+         {% for v in valor %}
+            '{{v.prioridade}}',
+          {% endfor %}
+        ]
+      },
+      options: {
+        responsive: true
+      }
+    };
+
+    window.onload = function() {
+      var ctx = document.getElementById('chart-area').getContext('2d');
+      window.myPie = new Chart(ctx, config);
+    };
+
+    
+
+    var colorNames = Object.keys(window.chartColors);
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  </script>
+</body>
+
+</html>

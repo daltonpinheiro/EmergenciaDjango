@@ -1,0 +1,215 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+  <!-- Plotly.js -->
+  <script src="{%static 'js/plotly-latest.min.js'%}"></script>
+  <!-- Numeric JS -->
+  <!--
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.min.js"></script>
+  -->
+</head>
+
+<body>
+  Dados extraídos do servidor {{dia}}<br>
+  <h2>Número de fichas por prioridade clínica</h2>
+  <div id="pizza"></div>
+  <div id="fichas"></div>
+  <div id="myDiv"></div>
+  <div id="proporcao"></div>
+  <script>
+    var data = [{
+  values: [{% for v in valor %} {{v.qt}}, {% endfor %}],
+  labels: [{% for v in valor %} '{{v.prioridade}}', {% endfor %}],
+  marker: {
+    colors:['yellow','blue','grey','orange','green','red']
+  },
+  type: 'pie'
+		}];
+
+	Plotly.newPlot('pizza', data);
+
+var data = [{
+  x: [{% for v in valor2 %} '{{v.AnoMes}}', {% endfor %}],
+  y: [{% for v in valor2 %} {{v.qtde}}, {% endfor %}],
+  type: 'scatter',
+  name:'Total de fichas',
+  marker: {
+    color: 'black',
+    size: 12
+  }
+}];
+var layout={
+	title:'Quantidade de fichas mês a mês',	
+	xaxis: {
+    title: 'AnoMes'
+  },
+  yaxis: {
+    title: 'qt fichas'
+  }  
+};
+
+Plotly.newPlot('fichas', data,layout);
+
+
+
+
+
+
+var amarelo = {
+  x: [{% for v in valor2 %} '{{v.AnoMes}}', {% endfor %}],
+  y: [{% for v in valor2 %} {{v.amarelo}}, {% endfor %}],
+  type: 'lines+markers',
+  name:'amarelo',
+  marker: {
+    color: 'yellow',
+    size: 12
+  }
+};
+var azul = {
+  x: [{% for v in valor2 %} '{{v.AnoMes}}', {% endfor %}],
+  y: [{% for v in valor2 %} {{v.azul}}, {% endfor %}],
+  type: 'lines+markers',
+  name:'azul',
+  marker: {
+    color: 'blue',
+    size: 12
+  }
+};
+var branco = {
+  x: [{% for v in valor2 %} '{{v.AnoMes}}', {% endfor %}],
+  y: [{% for v in valor2 %} {{v.branco}}, {% endfor %}],
+  type: 'lines+markers',
+  name:'branco',
+  marker: {
+    color: 'grey',
+    size: 12
+  }
+};
+var laranja = {
+  x: [{% for v in valor2 %} '{{v.AnoMes}}', {% endfor %}],
+  y: [{% for v in valor2 %} {{v.laranja}}, {% endfor %}],
+  type: 'lines+markers',
+  name:'laranja',
+  marker: {
+    color: 'orange',
+    size: 12
+  }
+};
+var verde = {
+  x: [{% for v in valor2 %} '{{v.AnoMes}}', {% endfor %}],
+  y: [{% for v in valor2 %} {{v.verde}}, {% endfor %}],
+  type: 'lines+markers',
+  name:'verde',
+  marker: {
+    color: 'green',
+    size: 12
+  }
+};
+var vermelho = {
+  x: [{% for v in valor2 %} '{{v.AnoMes}}', {% endfor %}],
+  y: [{% for v in valor2 %} {{v.vermelho}}, {% endfor %}],
+  type: 'lines+markers',
+  name:'vermelho',
+  marker: {
+    color: 'red',
+    size: 12
+  }
+};
+var layout={
+	title:'Quantidade de fichas mês a mês por prioridade clínica',	
+	xaxis: {
+    title: 'AnoMes'
+  },
+  yaxis: {
+    title: 'qt fichas'
+  }  
+};
+var data = [amarelo, azul,branco,laranja,verde,vermelho];
+Plotly.newPlot('myDiv', data,layout);
+
+
+
+
+
+
+
+
+
+
+
+var amarelo = {
+  x: [{% for v in valor2 %} {{v.AnoMes}}, {% endfor %}],
+  y: [{% for v in valor2 %} {{v.amarelo}}/{{v.qtde}}, {% endfor %}],
+  type: 'lines+markers',
+  name:'amarelo',
+  marker: {
+    color: 'yellow',
+    size: 12
+  }
+};
+var azul = {
+  x: [{% for v in valor2 %} {{v.AnoMes}}, {% endfor %}],
+  y: [{% for v in valor2 %} {{v.azul}}/{{v.qtde}}, {% endfor %}],
+  type: 'lines+markers',
+  name:'azul',
+  marker: {
+    color: 'blue',
+    size: 12
+  }
+};
+var branco = {
+  x: [{% for v in valor2 %} {{v.AnoMes}}, {% endfor %}],
+  y: [{% for v in valor2 %} {{v.branco}}/{{v.qtde}}, {% endfor %}],
+  type: 'lines+markers',
+  name:'branco',
+  marker: {
+    color: 'grey',
+    size: 12
+  }
+};
+var laranja = {
+  x: [{% for v in valor2 %} {{v.AnoMes}}, {% endfor %}],
+  y: [{% for v in valor2 %} {{v.laranja}}/{{v.qtde}}, {% endfor %}],
+  type: 'lines+markers',
+  name:'laranja',
+  marker: {
+    color: 'orange',
+    size: 12
+  }
+};
+var verde = {
+  x: [{% for v in valor2 %} {{v.AnoMes}}, {% endfor %}],
+  y: [{% for v in valor2 %} {{v.verde}}/{{v.qtde}}, {% endfor %}],
+  type: 'lines+markers',
+  name:'verde',
+  marker: {
+    color: 'green',
+    size: 12
+  }
+};
+var vermelho = {
+  x: [{% for v in valor2 %} {{v.AnoMes}}, {% endfor %}],
+  y: [{% for v in valor2 %} {{v.vermelho}}/{{v.qtde}}, {% endfor %}],
+  type: 'lines+markers',
+  name:'vermelho',
+  marker: {
+    color: 'red',
+    size: 12
+  }
+};
+var layout={
+	title:'Proporção de fichas mês a mês por prioridade clínica',	
+	xaxis: {
+    title: 'AnoMes'
+  },
+  yaxis: {
+    title: '% de fichas no mês'
+  }  
+};
+var data = [amarelo, azul,branco,laranja,verde,vermelho];
+Plotly.newPlot('proporcao', data,layout);
+
+</script>
+</body>
+</html>

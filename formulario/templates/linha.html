@@ -1,31 +1,137 @@
+
+
+<!doctype html>
 <html>
-  <head>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawLinhaChart);
+<head>
+  <!-- Plotly.js -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- Numeric JS -->
+  <!--
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.min.js"></script>
+  -->
+</head>
 
-      function drawLinhaChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Year', 'Sales', 'Expenses'],
-          ['2004',  1000,      400],
-          ['2005',  1170,      460],
-          ['2006',  660,       1120],
-          ['2007',  1030,      540]
-        ]);
+<body>
+  <h2>Número de fichas por prioridade clínica</h2>
+  <div id="pizza"></div>
+  <div id="fichas"></div>
+  <div id="myDiv"></div>
+  <div id="myDiv3"></div>
+  <div id="myDiv4"></div>
+  <script>
+    var data = [{
+  values: [ 1077,  9,  29,  297,  414,  44, ],
+  labels: [ 'AMARELO',  'AZUL',  'BRANCO',  'LARANJA',  'VERDE',  'VERMELHO', ],
+  marker: {
+    colors:['yellow','blue','grey','orange','green','red']
+  },
+  type: 'pie'
+    }];
 
-        var options = {
-          title: 'Company Performance',
-          legend: { position: 'bottom' }
-        };
+  Plotly.newPlot('pizza', data);
 
-        var chart = new google.visualization.LineChart(document.getElementById('linha_chart'));
+var data = [{
+  x: [ 201801,  201802,  201803 ],
+  y: [ 474,  702,  694],
+  type: 'scatter'
+}];
 
-        chart.draw(data, options);
-      }
-    </script>
-  </head>
-  <body>
-    <div id="linha_chart" style="width: 900px; height: 500px"></div>
-  </body>
+Plotly.newPlot('fichas', data);
+
+
+var amarelo = {
+  x: [ 201801,  201802,  201803, ],
+  y: [ 297,  396,  384, ],
+  type: 'lines+markers',
+  name:'amarelo',
+  marker: {
+    color: 'yellow',
+    size: 12
+  }
+};
+var azul = {
+  x: [ 201801,  201802,  201803, ],
+  y: [ 1,  4,  4, ],
+  type: 'lines+markers',
+  name:'azul',
+  marker: {
+    color: 'blue',
+    size: 12
+  }
+};
+var branco = {
+  x: [ 201801,  201802,  201803, ],
+  y: [ 5,  12,  12, ],
+  type: 'lines+markers',
+  name:'branco',
+  marker: {
+    color: 'grey',
+    size: 12
+  }
+};
+var laranja = {
+  x: [ 201801,  201802,  201803, ],
+  y: [ 65,  129,  103, ],
+  type: 'lines+markers',
+  name:'laranja',
+  marker: {
+    color: 'orange',
+    size: 12
+  }
+};
+var verde = {
+  x: [ 201801,  201802,  201803, ],
+  y: [ 94,  146,  174, ],
+  type: 'lines+markers',
+  name:'verde',
+  marker: {
+    color: 'green',
+    size: 12
+  }
+};
+var vermelho = {
+  x: [ 201801,  201802,  201803, ],
+  y: [ 12,  15,  17, ],
+  type: 'lines+markers',
+  name:'vermelho',
+  marker: {
+    color: 'red',
+    size: 12
+  }
+};
+var layout={
+  title:'Quantidade de fichas mês a mês por prioridade clínica',  
+  xaxis: {
+    title: 'AnoMes'
+  },
+  yaxis: {
+    title: 'qt fichas'
+  }  
+};
+var data = [amarelo, azul,branco,laranja,verde,vermelho];
+Plotly.newPlot('myDiv', data,layout);
+
+
+var data = {
+  x: [1, 2, 3, 4],
+  y: [10, 15, 13, 17],
+  type: 'scatter'
+};
+
+Plotly.newPlot('myDiv3', data);
+
+
+
+var data = [
+  {
+    x: [ 201801,  201802,  201803 ],
+    y: [ 474,  702,  694],
+    type: 'scatter'
+  }
+];
+
+Plotly.newPlot('myDiv4', data);
+
+</script>
+</body>
 </html>
