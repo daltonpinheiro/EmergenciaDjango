@@ -90,8 +90,8 @@ class Paciente(models.Model):
 	Regulado=models.CharField(max_length=1,choices=ReguladoChoices)
 	Procedencia=models.ForeignKey(DimProcedencia,verbose_name="Procedência",on_delete=models.CASCADE,null=True,blank=True)
 	Queixa=models.TextField(max_length=120,null=True,blank=True)
-	Fluxograma=models.ForeignKey(DimFluxograma,verbose_name="Fluxograma",on_delete=models.CASCADE,null=True,blank=True)
-	Discriminador=models.ForeignKey(DimDiscriminador,verbose_name="Discriminador",on_delete=models.CASCADE,related_name="Discriminador",null=True,blank=True)
+	Fluxograma=models.ForeignKey(DimFluxograma,verbose_name="Fluxograma",on_delete=models.CASCADE,default=0)
+	Discriminador=models.ForeignKey(DimDiscriminador,verbose_name="Discriminador",on_delete=models.CASCADE,related_name="Discriminador",default=0)
 	SemDiscriminador=models.BooleanField("Não")
 	#Sinais Vitais
 	Glic=models.CharField('Glic',max_length=9,blank=True,null=True)
@@ -116,9 +116,9 @@ class Paciente(models.Model):
 	prioridade=models.CharField(verbose_name="Prioridade Clínica",choices=PrioridadeChoices,max_length=9)
 	ObsPrioridade=models.TextField(verbose_name="Observação",max_length=100,blank=True,null=True)
 	HoraFimCR=models.TimeField("Hora Fim CR",blank=True,null=True)
-	Classificador=models.ForeignKey(DimClassificador,verbose_name="Classificador",on_delete=models.CASCADE,related_name="Classificador",blank=True,null=True)
+	Classificador=models.ForeignKey(DimClassificador,verbose_name="Classificador",on_delete=models.CASCADE,related_name="Classificador",default=0)
 	#Reclassificação segunda classificação vou colocar 2 no final de cada campo
-	Discriminador2=models.ForeignKey(DimDiscriminador,verbose_name="Discriminador",on_delete=models.CASCADE,related_name="Discriminador2",null=True,blank=True)
+	Discriminador2=models.ForeignKey(DimDiscriminador,verbose_name="Discriminador",on_delete=models.CASCADE,related_name="Discriminador2",blank=True,null=True)
 	prioridade2=models.CharField(verbose_name="Prioridade Clínica2",choices=PrioridadeChoices,max_length=9,null=True,blank=True)
 	hora=models.TimeField("Hora",null=True,blank=True)#hora da reclassificação
 	FluxoInterno=models.TextField(max_length=100,null=True,blank=True)
