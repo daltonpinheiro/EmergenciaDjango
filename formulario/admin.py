@@ -1,4 +1,4 @@
-'''Sistema desenvolvido por Dalton funcionário da EBSERH(HUMAP)'''
+'''Sistema desenvolvido por Dalton/Suzete funcionário da EBSERH(HUMAP)'''
 from django.contrib import admin
 # Register your models here.
 from .models import DimChegada,DimEspecialidade,DimProcedencia,DimFluxograma,DimDiscriminador,DimClassificador,Paciente
