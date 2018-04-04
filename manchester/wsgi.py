@@ -1,4 +1,5 @@
 """
+Sistema desenvolvido por Dalton funcionário da EBSERH(HUMAP)
 WSGI config for manchester project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.

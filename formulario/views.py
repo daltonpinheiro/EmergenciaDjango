@@ -1,3 +1,4 @@
+'''Sistema desenvolvido por Dalton funcionário da EBSERH(HUMAP)'''
 from django.shortcuts import render,redirect
 from .models import Paciente
 from .forms import FormPaciente
