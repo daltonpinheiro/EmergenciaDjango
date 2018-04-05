@@ -8,17 +8,19 @@ Este sistema cria uma ficha que se acomoda perfeitamente a uma folha A4:
 ## Instalação
 1)	Instalar python na máquina, no Linux criar um virtualenv com a versão de python 3.6.4;
 2)	Instalar a versão mais recente do Django 2.0.1 (pip install django);
-3)	Baixe o repositório em uma pasta.
+3)	Baixe o repositório em uma pasta;
+4)  Descompacte o arquivo, entre na pasta e digite "pip install -r requirements.txt" para instalar os pacotes adicionais que sistema vai usar.
+
 ## Testando
 Entre na pasta que baixou e digite “python manage.py runserver”
 
-Modo operador:
+**Modo operador**
 
 Login:operador
 
 Senha:operador
 
-Modo admin:
+**Modo admin**
 
 Login:admin
 
