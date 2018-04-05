@@ -11,11 +11,17 @@ Este sistema cria uma ficha que se acomoda perfeitamente a uma folha A4:
 3)	Baixe o repositório em uma pasta.
 ## Testando
 Entre na pasta que baixou e digite “python manage.py runserver”
+
 Modo operador:
+
 Login:operador
+
 Senha:operador
+
 Modo admin:
+
 Login:admin
+
 Senha:manchester
 
 Desenvolvedores: Dalton/Suzete EBSERH
