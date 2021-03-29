@@ -73,7 +73,7 @@ pyexcel-ods==0.4.0
 pyexcel-webio==0.0.11
 pyexcel-xls==0.4.0
 pyexcel-xlsx==0.4.0
-Pygments==2.2.0
+Pygments==2.7.4
 pypandoc==1.4
 pyparsing==2.2.0
 python-dateutil==2.6.1
